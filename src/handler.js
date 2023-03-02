@@ -47,12 +47,14 @@ const getNoteByIdHandler = (request, h) => {
   const note = notes.filter((n) => n.id === id)[0]
 
   if (note !== undefined) {
-    return {
+    const response = h.response({
       status: 'success',
       data: {
         note,
       },
-    }
+    })
+    response.code(201)
+    return response
   }
 
   const response = h.response({
