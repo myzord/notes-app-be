@@ -1,8 +1,9 @@
+/* eslint-disable no-underscore-dangle */
 const { nanoid } = require('nanoid')
 const InvariantError = require('../../exceptions/InvariantError')
 const NotFoundError = require('../../exceptions/NotFoundError')
 
-class NotesService {
+class NotesService1 {
   constructor() {
     this._notes = []
   }
@@ -69,4 +70,4 @@ class NotesService {
   }
 }
 
-module.exports = NotesService
+module.exports = NotesService1
